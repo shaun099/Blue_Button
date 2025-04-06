@@ -1,0 +1,41 @@
+# ------------------
+# Node.js backend
+# ------------------
+backend/node_modules/
+backend/.env.development.local
+backend/.env.production.local
+backend/package-lock.json
+backend/*.env
+backend/*.env.*.local
+
+# ------------------
+# Vite React frontend (assuming in /client or /frontend)
+# ------------------
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/package-lock.json
+
+
+
+
+# ------------------
+# General
+# ------------------
+.DS_Store
+*.swp
+*.swo
+*.bak
+*.tmp
+.vscode/
+.idea/
+*.iml
+*.log
+
+# ------------------
+# Build outputs
+# ------------------
+build/
+out/
+coverage/
