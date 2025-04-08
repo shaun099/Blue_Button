@@ -25,8 +25,9 @@ export const handleCallback = async (req, res) => {
         console.error("CALLBACK SESSION ERROR"); //debug
         return res.status(500).json({ message: "Session save failed" });
       }
-      //res.redirect("http://localhost:5500/api/patient");
+      
       res.redirect("http://localhost:5173?auth=done");
+      //res.redirect("http://localhost:5500/api/eob/");//eob debug
     });
   } catch (err) {
     console.error("Callback: OAuth callback error:", err); //debug

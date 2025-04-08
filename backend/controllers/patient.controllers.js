@@ -60,7 +60,7 @@ export const searchPatients = async (req, res) => {
     console.log("No access token found in session:", req.session);
     return res
       .status(401)
-      .json({ redirect: true, url: "http://localhost:5500/auth/login" });
+      .json({ redirect: true, url: "http://localhost:5500/api/auth/login" });
   }
   try {
     const patients = await getPatient(req.session.bbAccessToken);
@@ -71,5 +71,6 @@ export const searchPatients = async (req, res) => {
     //res.json(patients);
   } catch (err) {
     res.status(500).json({ error: "Failed to fetch patient" });
+    console.log(err);
   }
 };

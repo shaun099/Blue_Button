@@ -9,7 +9,7 @@ const GetPatientsList = () => {
   const fetchPatients = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:5500/api/patient", {
+      const res = await axios.get("http://localhost:5500/api/patient/", {
         withCredentials: true,
       });
       
@@ -20,7 +20,7 @@ const GetPatientsList = () => {
     } catch (err) {
       console.error(err);
       if (err.response && err.response.status === 401) {
-        window.location.href = "http://localhost:5500/auth/login";
+        window.location.href = "http://localhost:5500/api/auth/login";
       } else {
         setError("Failed to fetch patient data");
       }

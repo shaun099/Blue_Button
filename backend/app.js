@@ -5,6 +5,7 @@ import passport from "passport";
 import { PORT } from "./config/env.js";
 import authRouter from "./routes/auth.routes.js";
 import patientRouter from "./routes/patient.routes.js";
+import eobRouter from "./routes/eob.routes.js";
 
 const app = express();
 
@@ -33,8 +34,10 @@ app.use(passport.session());
 
 
 
-app.use("/auth", authRouter);
-app.use("/api", patientRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/patient", patientRouter);
+
+app.use("/api/eob",eobRouter);
 
 app.get("/", (req, res) => {
   res.send("api running");
