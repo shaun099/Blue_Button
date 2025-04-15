@@ -6,6 +6,7 @@ import { PORT } from "./config/env.js";
 import authRouter from "./routes/auth.routes.js";
 import patientRouter from "./routes/patient.routes.js";
 import eobRouter from "./routes/eob.routes.js";
+import coverageRouter from "./routes/coverage.routes.js"
 
 const app = express();
 
@@ -38,6 +39,8 @@ app.use("/api/auth", authRouter);
 app.use("/api/patient", patientRouter);
 
 app.use("/api/eob",eobRouter);
+
+app.use("/api/coverage",coverageRouter);
 
 app.get("/", (req, res) => {
   res.send("api running");

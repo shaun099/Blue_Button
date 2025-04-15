@@ -41,3 +41,13 @@ export const getEob = async (accessToken, types = null) => {
   return result;
 };
 
+export const getCoverage = async (accessToken) => {
+  // eslint-disable-next-line no-undef
+  const response = await axios.get(`${process.env.BB_API_BASE_URL}Coverage`, {
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+      Accept: "application/json",
+    },
+  });
+  return response.data;
+};

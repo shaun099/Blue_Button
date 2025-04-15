@@ -2,6 +2,7 @@ import React from "react";
 import GetPatientsList from "./components/GetPatientsList"; // Renamed import
 import GetPatientEob from "./components/GetPatientEob";
 import ClaimDetails from "./components/ClaimDetails";
+import GetDme from "./components/GetDme";
 
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
             <GetPatientsList /> {/* Use renamed component */}
             {/* <GetPatientEob /> */}
             <ClaimDetails/>
+            <GetDme/>
         </div>
     );
 };
