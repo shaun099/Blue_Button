@@ -5,6 +5,7 @@ import ClaimDetails from "./components/ClaimDetails";
 import GetDme from "./components/GetDme";
 
 
+
 const App = () => {
     return (
         <div className="container mx-auto p-4">
@@ -13,6 +14,7 @@ const App = () => {
             {/* <GetPatientEob /> */}
             <ClaimDetails/>
             <GetDme/>
+           
         </div>
     );
 };
