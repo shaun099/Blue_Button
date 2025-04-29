@@ -48,13 +48,13 @@ const GetDme = () => {
     <div className="container mx-auto p-6 bg-white shadow-lg rounded-lg">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Durable Medical Equipment Claim Details</h1>
-        <button
+        {/* <button
           onClick={fetchEobData}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           disabled={loading}
         >
           {loading ? 'Loading...' : 'Fetch EOB Data'}
-        </button>
+        </button> */}
       </div>
 
       {eobData.length === 0 ? (

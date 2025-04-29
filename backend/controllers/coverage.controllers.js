@@ -14,8 +14,9 @@ export const searchCoverage = async (req, res) => {
   try {
     const response = await getCoverage(req.session.bbAccessToken);
 
-    console.log(response.data);
+    //console.log("data" + response.data);
     res.json(response);
+    console.log(JSON.stringify(response.entry[0], null, 2));
   } catch (err) {
     console.log(err);
   }

@@ -64,14 +64,14 @@ const ClaimDetails = () => {
   return (
     <div className="w-full min-h-screen bg-gray-100 p-4">
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-2xl font-bold">Claim Details</h1>
-        <button
+        <h1 className="text-2xl font-bold">SNF</h1>
+        {/* <button
           onClick={fetchClaimData}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           disabled={loading}
         >
           {loading ? 'Loading...' : 'Fetch Claim Data'}
-        </button>
+        </button> */}
       </div>
 
       {error && (
