@@ -1,4 +1,5 @@
 import { getPatient } from "../services/bluebutton.services.js";
+import { PatientField } from "../utils/fields.utils.js";
 
 export const searchPatients = async (req, res) => {
   console.log("search patient func");
@@ -10,9 +11,10 @@ export const searchPatients = async (req, res) => {
   }
   try {
     const patients = await getPatient(req.session.bbAccessToken);
-    res.json(patients);
-    //console.log(patients);
-    //console.log(JSON.stringify(patients.entry[0], null, 2));
+    const response = PatientField(patients);
+    res.json(response);
+    console.log("------------------------------------------");
+    console.log(response);
   } catch (err) {
     res.status(500).json({ error: "Failed to fetch patient" });
     console.log(err);

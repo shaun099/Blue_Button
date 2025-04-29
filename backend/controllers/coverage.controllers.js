@@ -16,7 +16,7 @@ export const searchCoverage = async (req, res) => {
 
     //console.log("data" + response.data);
     res.json(response);
-    console.log(JSON.stringify(response.entry[0], null, 2));
+    //console.log(JSON.stringify(response.entry[0], null, 2));
   } catch (err) {
     console.log(err);
   }
