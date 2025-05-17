@@ -31,7 +31,7 @@ const JsonTable3 = () => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await axios.get("http://localhost:5500/api/patient/", {
+      const response = await axios.get("http://localhost:5500/api/eob?type=carrier", {
         withCredentials: true,
       });
       const json = response.data;

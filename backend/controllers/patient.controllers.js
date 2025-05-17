@@ -13,8 +13,6 @@ export const searchPatients = async (req, res) => {
     const patients = await getPatient(req.session.bbAccessToken);
     const response = PatientField(patients);
     res.json(response);
-    console.log("------------------------------------------");
-    console.log(response);
   } catch (err) {
     res.status(500).json({ error: "Failed to fetch patient" });
     console.log(err);
