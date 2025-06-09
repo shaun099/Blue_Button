@@ -1,7 +1,7 @@
 import React from "react";
 import PatientInfo from "./components/PatientInfo";
 import GetPatientEob from "./components/GetPatientEob";
-import GetPatientCoverage from "./components/GetPatientCoverage";
+import GetPatientCoverage from "./components/CoverageDisplay";
 
 
 const App = () => {
