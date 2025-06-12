@@ -1,7 +1,8 @@
 import { getEob } from "../services/bluebutton.services.js";
 //import { filterCarrierEOB, transformEOB } from "../utils/carrier.utils.js";
 
-import { filterOutpatientEOB, transformOutpatientEOB } from "../utils/outpatient.utils.js";
+//import { filterOutpatientEOB, transformOutpatientEOB } from "../utils/outpatient.utils.js";
+import { filterInpatientEOB,transformInpatientEOB } from "../utils/inpatient.utils.js";
 
 export const searchEob = async (req, res) => {
   console.log("get Eob called");
@@ -19,8 +20,10 @@ export const searchEob = async (req, res) => {
     const PatientEob = await getEob(req.session.bbAccessToken, types);
     //res.json(PatientEob);
     //const data = filterCarrierEOB(PatientEob);
-    const data = filterOutpatientEOB(PatientEob);
-    const output = transformOutpatientEOB(data);
+    //const data = filterOutpatientEOB(PatientEob);
+    const data = filterInpatientEOB(PatientEob);
+    const output = transformInpatientEOB(data);
+    //const output = transformOutpatientEOB(data);
     //const output = transformEOB(data);
     return res.json(output);
   } catch (err) {
