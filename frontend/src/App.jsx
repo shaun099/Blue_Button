@@ -1,15 +1,16 @@
 import React from "react";
 import PatientInfo from "./components/PatientInfo";
 import GetPatientEob from "./components/GetPatientEob";
-import GetPatientCoverage from "./components/CoverageDisplay";
+import CarrierEOB from "./components/EOBViewer";
 
 
 const App = () => {
     return (
         <div className="container mx-auto p-4">
-            <PatientInfo/>
-            <GetPatientEob/>
-            <GetPatientCoverage/>
+            {/* <PatientInfo/>
+            <GetPatientEob/> */}
+            <CarrierEOB/>
+            
         </div>
     );
 };
